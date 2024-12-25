@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>मनाधार</title>
+    <link rel="stylesheet" href="amazon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div>
+    <div class="header">
+      <div class="logo"> <img src="logo2.jpg" />
+        <h1>मनाधार</h1>
+      </div>
+      <div class="sections">
+        <!-- <div class="sec2"><a href="lekh.html">लेख</a> </div> -->
+        <div class="sec3"><a href="prasidhhakavita.html">प्रसिद्ध कविता</a></div>
+        <div class="sec4"><a href="prasidhhalekh.html">प्रसिद्ध लेख</a></div>
+        <div class="sec1"><a href="navinkavita.html">Post Your Poem</a></div>
+        <div class="sec5"><a href="magzine.html">Magzine</a></div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+    <div class="containers">
+        <div class="head">
+            <h3>Post Your Poems</h3>
+        </div>
+        <div><span id="comment">0</span> Post</div>
+        <div class="text">
+            <p>We are happy to read you:</p>
+        </div>
+        <div class="comments"></div>
+        <div class="commentbox">
+            <img src="user1.png" alt="User">
+            <div class="content">
+                <h4 class="h4comment">Author: </h4>
+                <!-- <input type="text" value="Anonymous" class="user"> -->
+                <input type="text"  class="user" placeholder="Enter your name">
+
+                <div class="commentinput">
+                    <input type="text" placeholder="Enter Your content" class="usercomment">
+                    <div class="buttons">
+                        <button type="submit" disabled id="publish">Post</button>
+                        <div class="notify">
+                            <input type="checkbox" class="notifyinput"> <span>Notify me</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="policy">"All rights are reserved on this site" <a href="Terms and policy.html">privacy policy</a> and <a href="Terms and policy.html">Terms of Service</a> apply.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="info">
+        <pre2>Manaadhaar: A Great resource directory and social network for Marathi language, Marathi People and Maharashtrian culture. Marathi is the language spoken by 70 million people and is the official language of Maharashtra state in India.</pre2>
+    </div>
+
+    <footer>
+        <!-- Your footer content -->
+        <footer>
+          <div class="footerContainer">
+        
+            <div class="socialIcons">
+              <a href="https://t.me/manadhar2144"><i class="fa-brands fa-telegram"></i></a>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-twitter"></i></a>
+              <a href="https://youtube.com/@Manadhar2144?feature=shared"><i class="fa-brands fa-youtube"></i></a>
+              <a
+                href="https://www.linkedin.com/in/samruddhi-bhamburkar-6320ba28b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                  class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <div class="footerNav">
+              <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="AboutUs.html">About us</a></li>
+                <li><a href="Terms and policy.html">Terms and policy</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="ourTeam.html">Our Team</a></li>
+              </ul>
+            </div>
+        
+            <div class="footerBottom">
+              <p>Copyright &copy;2023; Designed by <span class="designer"></span></p>
+            </div>
+          </div>
+        </footer>
+        <script src="javascript.js"></script>
+        </body>
+        
+        </html> 
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- <script> 
+ document.addEventListener("DOMContentLoaded", () => {
+//   const userComment = document.querySelector(".usercomment");
+//   const publishBtn = document.querySelector("#publish");
+//   const comments = document.querySelector(".comments");
+//   const userName = document.querySelector(".user");
+
+//   // Load and display stored comments on page load
+//   loadComments();
+
+//   // Enable/disable the publish button based on input
+//   userComment.addEventListener("input", () => {
+//       if (!userComment.value.trim()) {
+//           publishBtn.setAttribute("disabled", "disabled");
+//       } else {
+//           publishBtn.removeAttribute("disabled");
+//       }
+//   });
+
+//   // Add a new comment
+//   publishBtn.addEventListener("click", () => {
+//       if (!userComment.value.trim()) return;
+
+//       const name = userName.value.trim() || "Anonymous";
+//       const message = userComment.value.trim();
+//       const date = new Date().toLocaleString();
+
+//       const comment = {
+//           name,
+//           message,
+//           date,
+//           image: name === "Anonymous" ? "anonymous.png" : "user.png"
+//       };
+
+//       // Save comment to local storage
+//       saveComment(comment);
+
+//       // Clear input fields
+//       userComment.value = "";
+//       userName.value = "";
+
+//       // Update comments display
+//       loadComments();
+//   });
+
+//   // Function to save a comment to local storage
+//   function saveComment(comment) {
+//       let comments = JSON.parse(localStorage.getItem('comments')) || [];
+//       comments.push(comment);
+//       localStorage.setItem('comments', JSON.stringify(comments));
+//   }
+
+//   // Function to load comments from local storage and display them
+//   function loadComments() {
+//       let commentsList = JSON.parse(localStorage.getItem('comments')) || [];
+//       comments.innerHTML = "";
+
+//       commentsList.forEach(comment => {
+//           const commentHTML = `
+//               <div class="parents">
+//                   <img src="${comment.image}" alt="User Image">
+//                   <div>
+//                       <h1>${comment.name}</h1>
+//                       <p>${comment.message}</p>
+//                       <div class="engagements">
+//                           <img src="like.png" alt="Like">
+//                           <img src="share.png" alt="Share">
+//                       </div>
+//                       <span class="date">${comment.date}</span>
+//                   </div>
+//               </div>`;
+//           comments.innerHTML += commentHTML;
+//       });
+
+//       // Update post count
+//       document.getElementById("comment").textContent = commentsList.length;
+//   }
+// });</script> -->
+
+// <script>
+// const USERID = {
+// name: null,
+// identity: null,
+// image: null,
+// message: null,
+// date: null
+// }
+
+// const userComment = document.querySelector(".usercomment");
+// const publishBtn = document.querySelector("#publish");
+// const comments = document.querySelector(".comments");
+// const userName = document.querySelector(".user");
+// const notify = document.querySelector(".notifyinput");
+
+// userComment.addEventListener("input", e => {
+//   if(!userComment.value) {
+//       publishBtn.setAttribute("disabled", "disabled");
+//       publishBtn.classList.remove("abled")
+//   }else {
+//       publishBtn.removeAttribute("disabled");
+//       publishBtn.classList.add("abled")
+//   }
+// })
+
+// function addPost() {
+//   if(!userComment.value) return;
+//   USERID.name = userName.value;
+//   if(USERID.name === "Anonymous") {
+//       USERID.identity = false;
+//       USERID.image = "anonymous.png"
+//   }else {
+//       USERID.identity = true;
+//       USERID.image = "user.png"
+//   }
+
+//   USERID.message = userComment.value;
+//   USERID.date = new Date().toLocaleString();
+//   let published = 
+//   `<div class="parents">
+//       <img src="${USERID.image}">
+//       <div>
+//           <h1>${USERID.name}</h1>
+//           <p>${USERID.message}</p>
+//           <div class="engagements"><img src="like.png" id="like"><img src="share.png" alt=""></div>
+//           <span class="date">${USERID.date}</span>
+//       </div>    
+//   </div>`
+
+//   comments.innerHTML += published;
+//   userComment.value = "";
+//   publishBtn.classList.remove("abled")
+
+//   let commentsNum = document.querySelectorAll(".parents").length;
+//   document.getElementById("comment").textContent = commentsNum;
+
+// }
+
+// publishBtn.addEventListener("click", addPost);
+</script> 
+
+
+
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const userComment = document.querySelector(".usercomment");
+  const publishBtn = document.querySelector("#publish");
+  const comments = document.querySelector(".comments");
+  const userName = document.querySelector(".user");
+
+  // Load and display stored comments on page load
+  loadComments();
+
+  // Enable/disable the publish button based on input
+  userComment.addEventListener("input", () => {
+      if (!userComment.value.trim()) {
+          publishBtn.setAttribute("disabled", "disabled");
+      } else {
+          publishBtn.removeAttribute("disabled");
+      }
+  });
+
+  // Add a new comment
+  publishBtn.addEventListener("click", () => {
+      if (!userComment.value.trim()) return;
+
+      // Get user input for name
+      const name = userName.value.trim() || "Anonymous"; // Default to "Anonymous" if name is empty
+      const message = userComment.value.trim();
+      const date = new Date().toLocaleString();
+
+      const comment = {
+          name,
+          message,
+          date,
+          image: name === "Anonymous" ? "anonymous.png" : "user.png"
+      };
+
+      // Save comment to local storage
+      saveComment(comment);
+
+      // Clear input fields
+      userComment.value = "";
+      userName.value = "";
+
+      // Update comments display
+      loadComments();
+  });
+
+  // Function to save a comment to local storage
+  function saveComment(comment) {
+      let comments = JSON.parse(localStorage.getItem('comments')) || [];
+      comments.push(comment);
+      localStorage.setItem('comments', JSON.stringify(comments));
+  }
+
+  // Function to load comments from local storage and display them
+  function loadComments() {
+      let commentsList = JSON.parse(localStorage.getItem('comments')) || [];
+      comments.innerHTML = "";
+
+      commentsList.forEach((comment, index) => {
+          const commentHTML = `
+              <div class="parents" data-index="${index}">
+                  <img src="${comment.image}" alt="User Image">
+                  <div>
+                      <h1>${comment.name}</h1>
+                      <p>${comment.message}</p>
+                      <div class="engagements">
+                          <img src="like.png" alt="Like">
+                          <img src="share.png" alt="Share">
+                      </div>
+                      <span class="date">${comment.date}</span>
+                      <button class="delete-btn">Delete</button>
+                  </div>
+              </div>`;
+          comments.innerHTML += commentHTML;
+      });
+
+      // Update post count
+      document.getElementById("comment").textContent = commentsList.length;
+
+      // Add event listeners for delete buttons
+      document.querySelectorAll(".delete-btn").forEach((btn, index) => {
+          btn.addEventListener("click", () => {
+              deleteComment(index);
+          });
+      });
+  }
+
+  // Function to delete a comment from local storage and update the display
+  function deleteComment(index) {
+      let comments = JSON.parse(localStorage.getItem('comments')) || [];
+      comments.splice(index, 1);  // Remove the comment at the specified index
+      localStorage.setItem('comments', JSON.stringify(comments));
+      loadComments();  // Refresh the comments display
+  }
+});
+</script>
+
