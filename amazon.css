@@ -1,0 +1,610 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    height: auto;
+    max-width: 100%;
+    background-color: #001233;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px;
+}
+
+.sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px; /* Space between links */
+    flex-grow: 1;
+    text-align: center;
+}
+.sections a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sections a:hover {
+    background-color: #0a497b;
+    border-radius: 5px;
+    color: white;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo img {
+    height: 60px; /* Adjust for better scaling */
+    object-fit: contain;
+}
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.menu-toggle div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+    .sections {
+        display: none; /* Hide links initially */
+        flex-direction: column;
+        background-color: #001233;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 10px 0;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .sections a {
+        padding: 15px;
+        text-align: center;
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .sections.active {
+        display: flex; /* Show links when menu is toggled */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show hamburger menu */
+    }
+}
+
+
+h1 {
+    font-size: 3em;
+    font-weight: bolder;
+    color: #CAC0B3;
+}
+
+a {
+    color: #CAC0B3;
+}
+
+.image-container {position: relative;}
+
+.image-list {
+    display: flex;
+    /* position: absolute; */
+    overflow: hidden;
+}
+
+.image-item {
+    min-width: 100%;
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.image-item img {
+    width: 100%;
+    height: 650px;
+}
+
+.image-btn-container {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.btn-slider {
+    border: 2px solid transparent;
+    padding: 100px 20px;
+    font-size: 50px;
+    font-weight: 300;
+    background-color: transparent;
+    color: black;
+}
+
+.btn-slider:focus {
+    border-color: skyblue;
+    box-shadow: -2px -2px 2px rgb(13, 13, 13), 2px 2px 2px black, ;
+    margin: 1px;
+}
+
+
+
+.writer-name{
+    font-size: small;
+    font-family: cursive;
+    font-style: italic;
+    font-weight:600;
+}
+
+
+/* Unified style for all poems */
+.common-box {
+    margin: 20px auto; /* Center-align with auto margins */
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-size: 1.25rem; /* Scalable font size */
+    word-wrap: break-word;
+    overflow-x: auto; /* Allow horizontal scrolling if necessary */
+    max-width: 90%; /* Adjust width for smaller screens */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles for titles */
+.common-box h2,
+.common-box h3,
+.common-box h4 {
+    text-align: left;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .common-box {
+        font-size: 1rem; /* Reduce font size */
+        padding: 15px;
+        margin: 15px;
+    }
+    .common-box h2,
+    .common-box h3,
+    .common-box h4 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .common-box {
+        font-size: 0.9rem; /* Further reduce font size */
+        padding: 10px;
+        margin: 10px;
+    }
+    .common-box h2,
+    .common-box h3,
+    .common-box h4 {
+        font-size: 1rem;
+    }
+}
+
+
+.info {
+    width: 100%;
+    background-color: #111;
+    color: beige;
+    text-align: center;
+    font-size: larger;
+
+}
+
+footer {
+    background-color: #111;
+}
+
+.footer-Container {
+    width: 100%;
+    padding: 70px 20px 30px;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensures icons wrap on smaller screens */
+    gap: 15px; /* Adds consistent spacing between icons */
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Set a fixed width for the icon box */
+    height: 50px; /* Set a fixed height for the icon box */
+}
+
+.socialIcons a i {
+    font-size: 1.5em; /* Reduced font size for better scaling */
+    color: black;
+    opacity: 0.9;
+}
+
+.socialIcons a:hover {
+    background-color: #111;
+    color: white;
+    transition: 0.5s;
+}
+footer {
+    background-color: #111;
+}
+
+.footer-Container {
+    width: 100%;
+    padding: 70px 20px 30px;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensures icons wrap on smaller screens */
+    gap: 15px; /* Adds consistent spacing between icons */
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Set a fixed width for the icon box */
+    height: 50px; /* Set a fixed height for the icon box */
+}
+
+.socialIcons a i {
+    font-size: 1.5em; /* Reduced font size for better scaling */
+    color: black;
+    opacity: 0.9;
+}
+
+.socialIcons a:hover {
+    background-color: #111;
+    color: white;
+    transition: 0.5s;
+}
+
+.footerNav {
+    margin: 30px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    flex-wrap: wrap; /* Ensures nav items wrap on smaller screens */
+    padding: 0;
+    margin: 0;
+    gap: 20px; /* Adds spacing between items */
+}
+
+.footerNav ul li {
+    display: flex;
+    justify-content: center;
+}
+
+.footerNav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem; /* Adjusted font size for consistency */
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+}
+
+.footerBottom {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: white;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 600px) {
+    .socialIcons {
+        justify-content: center; /* Centers icons */
+    }
+
+    .socialIcons a {
+        width: 40px; /* Reduce size of icons for small screens */
+        height: 40px;
+        padding: 8px;
+    }
+
+    .socialIcons a i {
+        font-size: 1.2em; /* Reduce font size of icons */
+    }
+
+    .footerNav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: center; /* Center nav items horizontally */
+        gap: 10px;
+    }
+
+    .footerNav ul li a {
+        font-size: 1rem; /* Further reduce font size */
+    }
+
+    .footer-Container {
+        padding: 40px 10px 20px;
+    }
+}
+
+.AboutUs {
+    text-decoration: none;
+    color: #000;
+    font-size: xx-large;
+
+}
+
+.ourteam {
+    text-align: center;
+    color: #111;
+    font-size: x-large;
+    text-size-adjust: 2vh;
+
+}
+
+.ourteam1 {
+    text-align: center;
+    font-size: xx-large;
+    color: #000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.ourteam0 {
+
+    text-align: center;
+    font-size: 5vh;
+    color: navy;
+    font-family: fantansy
+}
+
+.sam {
+    height: 100%;
+    width: 100%;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* background-color: #CAC0B3; */
+    /* border: 2px solid black; */
+    margin-top: 10px;
+    /* margin-left: 80px; */
+    margin-bottom: 10px;
+    /* align-items: center;
+    text-align: center; */
+    /* text-shadow: 1px 0px rgb(26, 8, 8); */
+    /* all: revert; */
+}
+
+/* justify-content: center;}  */
+
+.Feedback {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+}
+object{
+    width: 100vw;
+    height: 90vh;
+    border-radius: 1rem;
+    align-items: center;
+    text-align: center;
+    
+}
+
+/* body {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+    /* background: #353935; */
+/* }  */
+
+.containers {
+    background: #fff;
+    padding: 20px;
+    font-family: monospace;
+    width: 500px;
+    box-shadow: 0 0 5px #000;
+    margin-left:36vw;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.head {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: #626263a8;
+}
+
+.text {
+    margin: 10px 0;
+    font-family: sans-serif;
+    font-size: 0.9em;
+}
+
+.commentbox {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.commentbox > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* float: left; */
+    margin-right: 20px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.content {
+    width: 100%;
+   
+}
+.h4comment{font-size: 21px;}
+
+.user {
+    border: none;
+    outline: none;
+    margin: 5px 0;
+    color: #808080;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.commentinput > input {
+    border: none;
+    padding: 10px;
+    padding-left: 0;
+    outline: none;
+    border-bottom: 2px solid blue;
+    margin-bottom: 10px;
+    width: 95%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #808080;
+}
+
+.buttons > button {
+    padding: 5px 10px;
+    background: lightgrey;
+    color: #808080;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.buttons > button.abled {
+    background: blue !important;
+    color: #fff;
+}
+
+.policy {
+    margin: 20px 0;
+    font-size: 0.8em;
+    font-family: Arial, sans-serif;
+    color: #808080;
+}
+
+.policy a {
+    text-decoration: none;
+    color: blue;
+}
+
+.notify {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.notify > input {
+    margin-right: 5px;
+    border: 2px solid #808080;
+}
+
+.parents {
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.parents h1 {
+    font-size: 0.9em;
+}
+
+.parents p {
+    margin: 10px 0;
+    font-size: 0.9em;
+}
+
+.parents > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.engagements {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.engagements img {
+    width: 20px;
+
+}
+
+.engagements img:nth-child(1) {
+    margin-right: 10px;
+    width: 25px;
+}
+
+.date {
+    color: #808080;
+    font-size: 0.8em;
+}
+
+
